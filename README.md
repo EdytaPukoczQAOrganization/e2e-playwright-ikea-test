@@ -4,7 +4,7 @@ Template to create a **Playwright** project with **Python** for end-to-end testi
 
 ## Description
 
-This project performs E2E tests on the [Bootcamp QA](https://bootcampqa.com) website, generating a report of results and video recordings. Tests are executed on **Chrome** (desktop).
+This project performs E2E tests on the [Ikea Spain](https://www.ikea.com/es/es/) website, generating a report of results and video recordings. Tests are executed on **Chrome** (desktop).
 
 ## Technologies
 
@@ -15,7 +15,7 @@ This project performs E2E tests on the [Bootcamp QA](https://bootcampqa.com) web
 
 You can view the test status using the following **GitHub Actions** badge:
 
-![Test Workflow](https://github.com/Bootcamp-QA/playwright-python-template/actions/workflows/playwright_tests.yml/badge.svg)
+![Test Workflow](https://github.com/EdytaPukoczQAOrganization/e2e-playwright-ikea-test/actions/workflows/playwright_tests.yml/badge.svg)
 
 ## Requirements
 
