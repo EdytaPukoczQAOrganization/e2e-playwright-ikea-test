@@ -19,8 +19,8 @@ def test_create_account_without_birth_date(page:Page):
     page.get_by_label("Sexo").select_option("FEMALE")
     
     print("And the user introduces the address")
-    page.get_by_role("textbox", name="family-signup-form").click()
-    page.get_by_role("textbox", name="family-signup-form").fill("28002")
+    page.get_by_role("textbox", name="Dirección, código postal o")
+    page.get_by_role("textbox", name="Dirección, código postal o").fill("28002")
     page.get_by_text("Calle de Aragón 28002 Madrid").click()
     page.locator("#family-signup-form-address-option-0").click()
     
@@ -73,8 +73,8 @@ def test_create_account_without_email(page:Page):
     page.get_by_label("Sexo").select_option("FEMALE")
     
     print("And the user introduces the address")
-    page.get_by_role("textbox", name="family-signup-form").click()
-    page.get_by_role("textbox", name="family-signup-form").fill("28002")
+    page.get_by_role("textbox", name="Dirección, código postal o")
+    page.get_by_role("textbox", name="Dirección, código postal o").fill("28002")
     page.get_by_text("Calle de Aragón 28002 Madrid").click()
     page.locator("#family-signup-form-address-option-0").click()
     
@@ -122,8 +122,8 @@ def test_create_account_under_18(page:Page):
     page.get_by_label("Sexo").select_option("FEMALE")
     
     print("And the user introduces the address")
-    page.get_by_role("textbox", name="family-signup-form").click()
-    page.get_by_role("textbox", name="family-signup-form").fill("28002")
+    page.get_by_role("textbox", name="Dirección, código postal o")
+    page.get_by_role("textbox", name="Dirección, código postal o").fill("28002")
     page.get_by_text("Calle de Aragón 28002 Madrid").click()
     page.locator("#family-signup-form-address-option-0").click()
     
