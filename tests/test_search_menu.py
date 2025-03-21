@@ -10,7 +10,8 @@ def test_search_valid_value(page:Page):
     print("And the user introduces a valid search value silla")
     #We use the .clear option to clear the search box in case there was something in there before
     page.get_by_role("combobox", name="Buscar por producto,").clear()
-    page.get_by_role("combobox", name="Buscar por producto,").fill("silla")
+    ##page.get_by_role("combobox", name="Buscar por producto,").fill("silla")
+    page.get_by_placeholder("Qué es lo que buscas").fill("silla")
     
     print("And the user hits enter")
     page.get_by_role("button", name="Buscar").click()
