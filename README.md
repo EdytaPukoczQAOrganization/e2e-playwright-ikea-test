@@ -4,7 +4,7 @@ Template to create a **Playwright** project with **Python** for end-to-end testi
 
 ## Description
 
-This project performs E2E tests on the [Ikea Spain](https://www.ikea.com/es/es/) website, generating a report of results and video recordings. Tests are executed on **Chrome** (desktop version).
+This project performs E2E tests on the [Ikea Spain](https://www.ikea.com/es/es/) website, generating a report of results and video recordings. Tests are executed on **Chrome** (desktop version) and on mobile **iPhone 12 Pro** (emulated).
 
 ## Technologies
 
