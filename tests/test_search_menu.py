@@ -1,5 +1,6 @@
 from playwright.sync_api import Page, expect
 import re
+import os
 
 def test_search_valid_value(page:Page):
     print("Given the user is on the Ikea homepage")
@@ -9,7 +10,8 @@ def test_search_valid_value(page:Page):
     page.get_by_role("button", name="Aceptar todas").click()
 
     #Close the popup, chosen Spain (Only happens on Github)
-    page.get_by_role("button", name="España").click()
+    if os.getenv("GITHUB_ACTIONS") == "true":
+        page.get_by_role("button", name="España").click()
     
     print("And the user introduces a valid search value silla")
     #We use the .clear option to clear the search box in case there was something in there before
@@ -35,7 +37,8 @@ def test_search_empty_value(page:Page):
     page.get_by_role("button", name="Aceptar todas").click()
     
     #Close the popup, chosen Spain (Only happens on Github)
-    page.get_by_role("button", name="España").click()
+    if os.getenv("GITHUB_ACTIONS") == "true":
+        page.get_by_role("button", name="España").click()
 
     print("And the user introduces an empty value and press enter")
 

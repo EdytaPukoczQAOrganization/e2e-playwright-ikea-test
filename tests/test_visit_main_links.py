@@ -1,4 +1,5 @@
 from playwright.sync_api import Page, expect
+import os
 
 def test_visit_main_menu_links_estancias_section(page:Page):
     print("Given the user visits the Ikea homepage")
@@ -8,7 +9,8 @@ def test_visit_main_menu_links_estancias_section(page:Page):
     page.get_by_role("button", name="Aceptar todas").click()
     
     #Close the popup, chosen Spain (Only happens on Github)
-    page.get_by_role("button", name="España").click()
+    if os.getenv("GITHUB_ACTIONS") == "true":
+        page.get_by_role("button", name="España").click()
 
     print("And the user clicks on the Estancias tab")
     page.get_by_role("tab", name="Estancias").click()
