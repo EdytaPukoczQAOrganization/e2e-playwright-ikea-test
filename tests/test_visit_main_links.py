@@ -7,6 +7,9 @@ def test_visit_main_menu_links_estancias_section(page:Page):
     print("When the user accepts cookies")
     page.get_by_role("button", name="Aceptar todas").click()
     
+    #Close the popup, chosen Spain (Only happens on Github)
+    page.get_by_role("button", name="España").click()
+
     print("And the user clicks on the Estancias tab")
     page.get_by_role("tab", name="Estancias").click()
     

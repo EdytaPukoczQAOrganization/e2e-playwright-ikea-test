@@ -8,7 +8,7 @@ def test_search_valid_value(page:Page):
     print("When the user accepts cookies")
     page.get_by_role("button", name="Aceptar todas").click()
 
-    print("Close the popup, chosen Spain")
+    #Close the popup, chosen Spain (Only happens on Github)
     page.get_by_role("button", name="España").click()
     
     print("And the user introduces a valid search value silla")
@@ -24,8 +24,6 @@ def test_search_valid_value(page:Page):
     page.locator("span").filter(has_text=re.compile(r"^Buscar$")).click()
     
 
-
-    
     print("Then the user should see the search results with the search term silla as the H1")
     expect(page.locator("h1")).to_contain_text("silla")
 
@@ -36,7 +34,7 @@ def test_search_empty_value(page:Page):
     print("When the user accepts cookies")
     page.get_by_role("button", name="Aceptar todas").click()
     
-    print("Close the popup, chosen Spain")
+    #Close the popup, chosen Spain (Only happens on Github)
     page.get_by_role("button", name="España").click()
 
     print("And the user introduces an empty value and press enter")
