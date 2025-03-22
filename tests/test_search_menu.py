@@ -11,7 +11,7 @@ def test_search_valid_value(page:Page):
     print("And the user introduces a valid search value silla")
     #We use the .clear option to clear the search box in case there was something in there before
     ##page.get_by_role("combobox", name="Buscar por producto,").clear()
-    page.get_by_placeholder("Qué es lo que buscas").click()
+    ##page.get_by_placeholder("Qué es lo que buscas").click()
     ##page.get_by_role("combobox", name="Buscar por producto,").fill("silla")
     page.get_by_placeholder("Qué es lo que buscas").fill("silla")
     
@@ -35,7 +35,7 @@ def test_search_empty_value(page:Page):
     
     print("And the user introduces an empty value and press enter")
 
-    page.get_by_role("combobox", name="Buscar por producto,").click()
+    ##page.get_by_role("combobox", name="Buscar por producto,").click()
     ##page.get_by_role("combobox", name="Buscar por producto,").press("Enter")
     page.get_by_placeholder("Qué es lo que buscas").fill(" ")
     page.locator("span").filter(has_text=re.compile(r"^Buscar$")).click()
