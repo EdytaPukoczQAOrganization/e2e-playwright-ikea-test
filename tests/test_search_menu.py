@@ -8,8 +8,8 @@ def test_search_valid_value(page:Page):
     print("When the user accepts cookies")
     page.get_by_role("button", name="Aceptar todas").click()
 
-    print("Close the popup to decide the country")
-    page.get_by_label("Cerrar").click
+    print("Close the popup, chosen Spain")
+    page.get_by_role("button", name="España").click()
     
     print("And the user introduces a valid search value silla")
     #We use the .clear option to clear the search box in case there was something in there before
@@ -36,9 +36,9 @@ def test_search_empty_value(page:Page):
     print("When the user accepts cookies")
     page.get_by_role("button", name="Aceptar todas").click()
     
-    print("Close the popup to decide the country")
-    page.get_by_label("Cerrar").click
-    
+    print("Close the popup, chosen Spain")
+    page.get_by_role("button", name="España").click()
+
     print("And the user introduces an empty value and press enter")
 
     ##page.get_by_role("combobox", name="Buscar por producto,").click()
